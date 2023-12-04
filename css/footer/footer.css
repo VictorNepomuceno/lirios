@@ -25,12 +25,13 @@
 .afterLink {
   transition: all 0.3s;
   position: relative;
+  color: var(--text-primary-color);
 }
 
 .afterLink::after {
   content: "";
   position: absolute;
-  width: 0;
+  width: 100%;
   left: 0;
   bottom: 0;
   height: 2px;
@@ -41,15 +42,12 @@
 }
 
 .afterLink:hover {
-  color: var(--text-primary-color);
+  color: #000;
 }
 
 .afterLink:hover.afterLink::after {
-  width: 100%;
-}
-
-.afterLink:not(:hover)::after {
-  transform: translateY(300%) translateX(150%);
+  width: 0%;
+  background: #000;
 }
 
 .footer-location img {
