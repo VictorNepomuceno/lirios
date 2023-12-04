@@ -1,0 +1,98 @@
+.header-menu {
+  background: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-logo {
+  display: block;
+  width: 250px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-list {
+  display: flex;
+  margin-top: 30px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.navbar-list li a {
+  font: 600 1rem/1.35 "Poppins", sans-serif;
+  color: var(--text-primary-color);
+  padding: 10px 20px;
+  transition: all 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  text-transform: uppercase;
+  float: center;
+  margin-bottom: 8px;
+  border-radius: 20px;
+}
+
+.navbar-list li a:hover {
+  /* outline: 1px solid var(--text-primary-color); */
+  background: var(--text-primary-color);
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+}
+
+.navbar-list li a:active {
+  transform: scale(1);
+}
+
+.navbar-list li:hover::before {
+  display: none;
+}
+.navbar-list li:hover::after {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header-logo {
+    width: 200px;
+  }
+
+  .navbar-list li a {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* grid-template-columns: 2fr 1fr; */
+    justify-content: center;
+    /* padding-top: 20px; */
+    align-items: center;
+  }
+
+  .navbar-list {
+    gap: 15px;
+    margin-top: 0px;
+  }
+
+  .header-logo {
+    width: 160px;
+  }
+
+  .navbar-list li a {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+  }
+
+  .navbar-list li:first-child {
+    display: none;
+  }
+}

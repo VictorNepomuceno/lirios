@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary-bg-color);
+  height: 100vh;
+  /* padding-top: 220px; */
+  /* margin-bottom: 4000px; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary-color);
+}
+
+h2 {
+  font-family: "PT Serif";
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 700;
+}
+h3 {
+  font-family: "PT Serif";
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+  color: var(--text-primary-color);
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+textarea {
+  margin: 0;
+  padding: 10px 10px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  font-family: "poppins";
+  width: 100%;
+}
+
+input,
+select {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  font-family: "poppins";
+  display: inline-block;
+  width: 100%;
+}
+
+/* input:focus {
+  outline: none !important;
+  outline: 1.5px solid #bb5f36;
+} */
+
+label {
+  font-family: "poppins";
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+/* input[type="submit"] {
+  cursor: pointer;
+  background-color: var(--text-primary-color);
+  padding: 20px 40px;
+  color: #fff;
+  border-radius: 20px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: block;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+  width: 100%;
+} */
+
+/* input[type="submit"]:hover {
+  background: #bb5f36;
+  transform: scale(1.02);
+} */
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: 1.5px solid #bb5f36;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #d1d1d1;
+}

@@ -1,0 +1,8 @@
+@import "./globbals/globals.css";
+@import "./utilities/colors.css";
+@import "./utilities/components.css";
+@import "./header/header.css";
+@import "./introduction/intro.css";
+@import "./services/services.css";
+@import "./products/products.css";
+@import "./footer/footer.css";
