@@ -201,8 +201,14 @@
   gap: 30px;
 }
 
+.footer-icons i:hover {
+  color: var(--primary-bg-color);
+  transform: scale(1.2);
+}
+
 .footer-icons i {
   font-size: 40px;
+  transition: all 0.3s;
 }
 
 .telefone {
