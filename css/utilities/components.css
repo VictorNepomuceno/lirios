@@ -28,7 +28,7 @@
 
 .whats {
   position: fixed;
-  z-index: 2;
+  z-index: 40;
   bottom: 120px;
   right: 18px;
   transition: all 0.3s;
@@ -84,12 +84,37 @@
   color: var(--text-primary-color);
 }
 
+.titleMain::before {
+  transition: all 0.3s;
+  position: relative;
+  top: -10px;
+  margin-right: 10px;
+  display: inline-block;
+  width: 25px;
+  height: 10px;
+  content: "";
+  background: var(--text-primary-color);
+}
+
+.titleMain:hover::before {
+  width: 35px;
+}
+
+.titleMain::after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 1px;
+  background: var(--text-primary-color);
+}
+
 @media (max-width: 600px) {
   .titleMain {
     font-size: 2rem;
   }
+
   .whats {
-    bottom: 30px;
+    bottom: 120px;
     right: 8px;
   }
 
