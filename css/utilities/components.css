@@ -29,7 +29,7 @@
 .whats {
   position: fixed;
   z-index: 40;
-  bottom: 120px;
+  bottom: 130px;
   right: 18px;
   transition: all 0.3s;
 }
@@ -113,8 +113,13 @@
     font-size: 2rem;
   }
 
+  .titleMain::before {
+    top: -8px;
+    height: 7px;
+  }
+
   .whats {
-    bottom: 120px;
+    bottom: 130px;
     right: 8px;
   }
 

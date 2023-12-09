@@ -95,7 +95,10 @@
     padding: 10px 15px 20px 15px;
     /* padding-top: 20px; */
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
     /* box-shadow: none; */
   }
 

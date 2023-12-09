@@ -121,3 +121,9 @@ input::placeholder,
 textarea::placeholder {
   color: #d1d1d1;
 }
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 108px;
+  }
+}
