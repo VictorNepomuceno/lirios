@@ -36,3 +36,41 @@ function animationOnScroll() {
 }
 
 window.addEventListener("scroll", animationOnScroll);
+
+const whatsTooltip = document.querySelectorAll("[data-tooltip]");
+
+whatsTooltip.forEach((item) => {
+  item.addEventListener("mouseover", onMouseOver);
+});
+
+function onMouseOver(event) {
+  const toolTipBoxEvent = criarToolTip(this);
+
+  onMouseLeave.toolTipBoxEvent = toolTipBoxEvent;
+  onMouseMove.toolTipBoxEvent = toolTipBoxEvent;
+
+  this.addEventListener("mouseleave", onMouseLeave);
+  this.addEventListener("mousemove", onMouseMove);
+}
+
+const onMouseLeave = {
+  handleEvent() {
+    this.toolTipBoxEvent.remove();
+  },
+};
+
+const onMouseMove = {
+  handleEvent(event) {
+    this.toolTipBoxEvent.style.top = event.pageY + -20 + "px";
+    this.toolTipBoxEvent.style.left = event.pageX + -300 + "px";
+  },
+};
+
+function criarToolTip(element) {
+  const toolTipBox = document.createElement("div");
+  const text = element.getAttribute("aria-label");
+  toolTipBox.innerText = text;
+  toolTipBox.classList.add("tooltip");
+  document.body.appendChild(toolTipBox);
+  return toolTipBox;
+}
